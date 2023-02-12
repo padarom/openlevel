@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/1-HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,14 +10,24 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/outline',
-      name: 'outline',
-      component: () => import('../views/OutlineView.vue'),
+      path: '/outline/setup',
+      name: 'setup-outline',
+      component: () => import('../views/2-SetupOutlineView.vue'),
+    },
+    {
+      path: '/outline/parametrize',
+      name: 'parametrize-outline',
+      component: () => import('../views/3-ParametrizeOutlineView.vue'),
+    },
+    {
+      path: '/grid',
+      name: 'setup-grid',
+      component: () => import('../views/4-SetupGridView.vue'),
     },
     {
       path: '/level',
-      name: 'level',
-      component: () => import('../views/LevelingView.vue'),
+      name: 'leveling',
+      component: () => import('../views/5-LevelingView.vue'),
     },
   ],
 })
